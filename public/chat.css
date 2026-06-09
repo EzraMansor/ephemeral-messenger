@@ -1,8 +1,20 @@
+/* Core Page Layout */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     display: flex;
+    flex-direction: column; 
     height: 100vh;
+    overflow: hidden;
+}
+
+/* Forces the horizontal layer to consume all vertical space above the footer */
+#app-container {
+    display: flex;
+    flex-direction: row;
+    flex: 1; 
+    width: 100%;
+    overflow: hidden;
 }
 
 /* Left sidebar: Active rooms */
@@ -14,6 +26,7 @@ body {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
+    height: 100%; /* Forces column to stretch to the container base */
 }
 
 #rooms-sidebar h2 {
@@ -41,9 +54,20 @@ body {
     margin-top: auto;
 }
 
+/* Restores layout properties and borders to the action buttons */
 #addroom, #adduser {
     display: block;
     text-align: center;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 8px;
+    margin-bottom: 5px;
+    box-sizing: border-box;
+}
+
+#addroom:hover, #adduser:hover {
+    cursor: pointer;
+    background-color: #f0f0f0;
 }
 
 /* Middle section: Chat area */
@@ -51,6 +75,7 @@ body {
     flex: 1;
     display: flex;
     flex-direction: column;
+    height: 100%;
 }
 
 .chat-titlebar {
@@ -103,6 +128,7 @@ body {
     border-left: 1px solid #ddd;
     padding: 10px;
     box-sizing: border-box;
+    height: 100%; /* Forces column to stretch to the container base */
 }
 
 #members-sidebar h2 {
@@ -115,10 +141,6 @@ body {
     margin-bottom: 5px;
     background-color: #fff;
     border: 1px solid #ccc;
-}
-
-#adduser:hover {
-    cursor: pointer;
 }
 
 #error {
@@ -146,4 +168,33 @@ body {
 #error button {
     padding: 3px 10px;
     border-radius: 5px;
+}
+
+/* Thin Fixed-Bottom Footer */
+.source-footer {
+    width: 100%;
+    height: 35px; 
+    background-color: #f9f9f9;
+    border-top: 1px solid #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.source-footer p {
+    margin: 0;
+    font-size: 0.75rem;
+    color: #666;
+}
+
+.source-footer a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.source-footer a:hover {
+    text-decoration: underline;
 }
