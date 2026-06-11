@@ -1,0 +1,119 @@
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+}
+
+#title {
+    margin: 10px;
+    margin-bottom: auto;
+    text-decoration: underline;
+}
+
+#timerContainer {
+    margin: auto 0 auto;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#timer, #deltaTimer {
+    text-align: center;
+    margin: 20px;
+}
+
+#timer {
+    font-size: 120px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    word-spacing: 0;
+}
+
+#deltaTImer {
+    font-size: 38px;
+}
+
+#buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+#buttons button {
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px black;
+    transition: background-color 50ms linear, box-shadow 150ms ease-in-out;
+}
+
+#buttons button:hover {
+    background-color: gainsboro;
+}
+
+#buttons button:active {
+    background-color: whitesmoke;
+    box-shadow: none;
+}
+
+#toDoList {
+    margin: 10px;
+    margin-top: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+#toDoList ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.task, #addTask {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.task * {
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+#addTask {
+    all: unset;
+    margin: 0;
+    padding: 0;
+    background-color: none;
+    border: none;
+    cursor: pointer;
+}
+
+.completed {
+    text-decoration: line-through solid black 2px;
+}
+
+.inactive {
+    background-color: gray !important;
+    box-shadow: none !important;
+    pointer-events: none;
+}

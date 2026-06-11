@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADHD Pomodoro</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1 id="title">ADHD Pomodoro</h1>
+    <div id="timerContainer">
+        <!-- insert svg here -->
+        <div id="timer">00:00:00</div>
+        <div id="deltaTimer">Delta: 00:00:00</div>
+        <div id="buttons">
+            <button class="inactive" id="timerStart">Start</button><button class="inactive" id="timerStop">Stop</button><button id="timerReset">Reset</button>
+        </div>
+    </div>
+    <div id="toDoList">
+        <ul>
+            <li id="addTask"><button>Add Task</button></li>
+        </ul>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type='module' src="main.js"></script>
+    <script type="module" src="task.js"></script>
+    <script type="module" src="timer.js"></script>
+</body>
+</html>
